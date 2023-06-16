@@ -16,8 +16,8 @@ pipeline {
     stages {
         stage('Build') {
             options {
-              timeout(time: 30)  // timeout on this stage
-              timestamps ()
+                timeout(time: 30)  // timeout on this stage
+                timestamps ()
             }
             steps {
                 echo "Database engine is ${DB_ENGINE}"
@@ -30,7 +30,7 @@ pipeline {
                 docker { image 'maven:3-alpine' }
             }
             options {
-              timestamps ()
+                timestamps ()
             }
             steps {
                 sh 'mvn --version'
@@ -41,7 +41,7 @@ pipeline {
                 docker { image 'openjdk:8-jre' }
             }
             options {
-              timestamps ()
+                timestamps ()
             }
             steps {
                 sh 'java -version'
