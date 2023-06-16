@@ -48,12 +48,10 @@ pipeline {
             }
         }
         
-
         stage('Clear') {
             steps {
                 step([$class: 'WsCleanup'])
             }
         }
-
     }
 }
